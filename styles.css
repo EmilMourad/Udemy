@@ -1,0 +1,362 @@
+body
+{
+    box-sizing: border-box;
+    margin:0px;
+}
+
+/*    navigation bar */
+
+
+nav
+{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    font-family:Arial;
+    font-size: calc(1vw + 10px);
+    height:140px;
+    
+    gap:10px;
+    
+    
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    padding-right: 20px;
+    
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    margin-bottom: 0px;
+    
+    
+}
+nav form
+{
+    display:flex;
+    flex: 2 7 auto;
+    
+    width:50%;
+    height:100%;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.search
+{
+    
+    width:90%;
+    min-width: 45%;
+    text-size-adjust: 100%;
+    
+    flex: 2 7 auto;
+    font-size:calc(1vw + 10px);
+    border-radius: 50px;
+    height:60%;
+    margin:auto;
+    
+}
+.nav-button-search
+{
+    width:9%;
+    margin:auto 5px auto 5px;
+    height:60%;
+    text-align: center;
+    width:200px;
+    
+    
+}
+.nav-box
+{
+    padding:15px;
+}
+nav a .nav-button
+{
+    margin-top:25px;
+}
+.nav-button
+{
+    margin-top:25px;
+    margin:auto 5px auto 5px;
+    height:70%;
+    text-align: center;
+    width:250px;
+    border: 0px;
+    background-color: white;
+    font-size:calc(0.3vw + 10px);
+}
+.logo
+{
+    width:150px;
+    height:70px;
+    margin:30px;
+   
+}
+#menu-bar
+{
+    display:none;
+}
+.icon-cart
+{
+    width:70px;
+    height:70px;
+    margin-top:30px;
+    padding: 0px;
+}
+nav div
+{
+    width:70px;
+    height:59%;
+    margin-top:26px;
+    margin-bottom: 26px;
+    border: 0.01px solid black;
+    text-align:center;
+    
+    
+}
+.icon-lang
+{
+    height:40%;
+    width:70%;
+    margin-top:25px;
+    
+}
+.nav-button-login
+{
+    margin:auto 5px auto 5px;
+    height:60%;
+    text-align: center;
+    width:200px;
+    
+    
+}
+.nav-button-signup
+{
+    margin:auto 5px auto 5px;
+    height:60%;
+    text-align: center;
+    width:200px;
+    background-color: black;
+    color:white;
+    
+}
+.nav-button:hover
+{
+    color:#5624d0;
+}
+
+@media screen and (max-width:2000px)
+{
+    #Categories
+    {
+        display:none;
+    }
+    
+}
+@media screen and (max-width:1600px)
+{
+    #Udemy-Business
+    {
+        display:none;
+    }
+}
+@media screen and (max-width:1200px)
+{
+    #Tech-on-Udemy
+    {
+        display:none;
+    }
+}
+@media screen and (max-width:1100px)
+{
+    .search
+    {
+        display: none;
+        width:0%;
+        margin:0;
+    }
+    .nav-button-login
+    {
+        display:none;
+        width:0%;
+        margin:0;
+    }
+    .nav-button-search
+    {
+        display:none;
+        width:0%;
+        margin:0;
+    }
+    .nav-button-signup
+    {
+        display:none;
+        width:0%;
+        margin:0;
+    }
+    .icon-cart
+    {
+        display: none;
+        width:0%;
+        margin:0;
+    }
+    #menu-bar
+    {
+        display: inline;
+        margin-left: 0px;
+        position:absolute;
+        left:0;
+        width:100px;
+    }
+    #logo
+    {
+        margin-left: 0px;
+        width:100px;
+    }
+    nav form
+    {
+        display:none;
+        width:0%;
+        margin:0;
+    }
+    nav
+    {
+        justify-content: end;
+        gap:0;
+    }
+
+}
+
+
+
+
+
+/* header */
+
+
+
+header
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family:Arial;
+    margin-top:0px;
+    width:90%;
+    flex-wrap: wrap-reverse;
+    margin-right: auto;
+    margin-left:auto;
+    height:100%;
+    background-color:whitesmoke;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    padding-top:50px;
+    padding-bottom: 100px;
+
+}
+
+.offer 
+{
+    
+    margin:auto;
+    
+    
+}
+.offer-div
+{
+
+    background-color: white;
+    height:70%;
+    font-size: calc(0.8vw + 10px);
+    width:70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding:20px;
+    margin-bottom: 80px;
+   
+    
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+}
+header .image
+{
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width:50%;
+    text-align: center;
+
+}
+
+
+/* final section */ 
+
+
+section .final-section
+{
+    border:1px solid black;
+    width: 100%;
+}
+section
+{
+    width:85%;
+    margin-right: auto;
+    margin-left:auto;
+}
+section .font
+{
+    font-family:Arial;
+    padding-left:5%;
+    
+    font-size:calc(1vw + 10px);
+
+
+}
+section ul
+{
+    display:flex;
+    flex-direction: row;
+    gap:5%;
+    
+    font-family:Arial;
+    padding-left: 2%;
+    font-size:calc( 1vw + 5px);
+    list-style-type: none;
+    
+}
+section .courses-intro
+{
+    width:80%;
+    font-family: Arial;
+    
+    font-size: calc(1vw + 15px);
+    
+    padding-left: 5%;
+}
+section .courses
+{
+    
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding-right: auto;
+    padding-left: auto;
+    gap:8%;
+    
+}
+section .courses a
+{
+    
+    text-align: center;
+    padding-left: 2%;
+}
+section img
+{
+    width:100%;
+}
+section a
+{
+    text-decoration: none;
+    color: black;
+}
+section a:hover
+{
+    color:#5624d0;
+}
