@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Udemy</title>
     <link rel = "stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
     <nav class = "nav">
         <!-- <h1 class = "nav-box">Udemy</h1> -->
         <a href = "index.html" > <img id = "menu-bar" class = "logo" src = "icons/menu-bar.jpg" alt = "menu bar" /></a>
-        <a href = "index.html" > <img id = "logo" class = "logo" src = "icons/udemy-logo.jpg" alt = "udemy logo" /></a>
-        <a href = "index.html" ><button type = "submit" class = "nav-button" id = "Categories"><h1>Categories</h1></button></a>
+        <a href = "index.html" id = "logo" > <img class = "logo" src = "icons/udemy-logo.jpg" alt = "udemy logo" /></a>
+        <a href = "index.html" class = "nav-button"><button type = "submit" class="nav-button-inside" id = "Categories">Categories</button></a>
        
         <form>
 
             <input class="search" type = "text" placeholder="Search for anything">
-            <button type = "submit" class = "nav-button-search"><h1>Submit</h1></button>
+            <button type = "submit" class = "nav-button-search">Submit</button>
         </form>
         
         
-        <a href = "index.html" ><button type = "submit" class = "nav-button" id = "Udemy-Business"><h1>Udemy Business</h1></button></a>
-        <a href = "index.html" ><button type = "submit" class = "nav-button" id = "Tech-on-Udemy"><h1>Tech on Udemy</h1></button></a>
-        <a href = "index.html" > <img class = "icon-cart" src = "icons/cart-logo.jpg" alt = "cart" /></a>
-        <button type = "submit" class = "nav-button-login"><h1>Log in</h1></button>
-        <button type = "submit" class = "nav-button-signup"><h1>Sign up</h1></button>
+        <a href = "index.html" class = "nav-button"><button type = "submit" class="nav-button-inside"  id = "Udemy-Business">Udemy Business</button></a>
+        <a href = "index.html" class = "nav-button"><button type = "submit" class="nav-button-inside"  id = "Tech-on-Udemy">Tech on Udemy</button></a>
+        <a href = "index.html" class = "cart" > <img class = "icon-cart" src = "icons/cart-logo.jpg" alt = "cart" /></a>
+        <button type = "submit" class = "nav-button-login">Log in</button>
+        <button type = "submit" class = "nav-button-signup">Sign up</button>
         <div>
              <a href = "index.html" > <img class = "icon-lang" src = "icons/langueges-logo.png" alt = "langueges" /></a>
         </div>
@@ -69,13 +70,109 @@
                     </p>
                 </p>
             </div>
-            <div class = "courses">
-                
-                <a href = "index.html" ><img src="icons/course1.jpg" alt = "course1" /> </a>
-                <a href = "index.html" ><img src="icons/course2.jpg" alt = "course2" /> </a>
-                <a href = "index.html" ><img src="icons/course3.jpg" alt = "course3" /> </a>
-                <a href = "index.html" ><img src="icons/course4.jpg" alt = "course4" /> </a>
-                <a href = "index.html" ><img src="icons/course4.jpg" alt = "course5" /> </a>
+            <div class="courses">
+                <!-- Course 1 -->
+                <div class="course">
+                    <img src="icons/course1.jpg" alt="python course" width="240" height="135">
+                    <a href="index.html">
+                        <h4 class="course-title">Learn Python: The Complete Python Programming Course</h3>
+                    </a>
+                    <p class="course-instructor">Avinash Jain, The Codex</p>
+                    <div class="stars">
+                        <i class="course-rate">4.4</i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p class="course-students">(2,845)</p>
+                    </div>
+                    <h4 class="course-price">E&#163;199.99</h4>
+                    <p class="course-discount">E&#163;679.99</p>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course">
+                    <img src="icons/course1.jpg" alt="python course" width="240" height="135">
+                    <a href="index.html">
+                        <h4 class="course-title">Learning Python for Data Analysis and Visualization</h3>
+                    </a>
+                    <p class="course-instructor">Jose Portilla</p>
+                    <div class="stars">
+                        <i class="course-rate">4.4</i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p class="course-students">(17,956)</p>
+                    </div>
+                    <h4 class="course-price">E&#163;269.99</h4>
+                    <p class="course-discount">E&#163;1,599.99</p>
+                    <span class="best-seller">Bestseller</span>
+                </div>
+
+
+                <!-- Course 3 -->
+                <div class="course">
+                    <img src="icons/course1.jpg" alt="python course" width="240" height="135">
+                    <a href="index.html">
+                        <h4 class="course-title">Python for Beginners - Learn Programming from scratch</h3>
+                    </a>
+                    <p class="course-instructor">Edwin Diaz, Coding Faculty Solutions</p>
+                    <div class="stars">
+                        <i class="course-rate">4.4</i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p class="course-students">(1,734)</p>
+                    </div>
+                    <h4 class="course-price">E&#163;199.99</h4>
+                    <p class="course-discount">E&#163;679.99</p>
+                </div>
+
+
+                <!-- Course 4 -->
+                <div class="course">
+                    <img src="icons/course1.jpg" alt="python course" width="240" height="135">
+                    <a href="index.html">
+                        <h4 class="course-title">Learn Python: Python for Beginners</h3>
+                    </a>
+                    <p class="course-instructor">Abrar Hussain</p>
+                    <div class="stars">
+                        <i class="course-rate">4.2</i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p class="course-students">(2,759)</p>
+                    </div>
+                    <h4 class="course-price">E&#163;199.99</h4>
+                    <p class="course-discount">E&#163;319.99</p>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course">
+                    <img src="icons/course1.jpg" alt="python course" width="240" height="135">
+                    <a href="index.html">
+                        <h4 class="course-title">Python Beyond the Basics - Object-Oriented Programming</h3>
+                    </a>
+                    <p class="course-instructor">Infinite Skills</p>
+                    <div class="stars">
+                        <i class="course-rate">4.4</i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <p class="course-students">(2,927)</p>
+                    </div>
+                    <h4 class="course-price">E&#163;229.99</h4>
+                    <p class="course-discount">E&#163;519.99</p>
+                </div>
             </div>
 
         </div>

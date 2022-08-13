@@ -3,147 +3,146 @@ body
     box-sizing: border-box;
     margin:0px;
 }
-
 /*    navigation bar */
-
-
 nav
 {
-    
     display:flex;
     flex-direction: row;
     justify-content:space-between;
     font-family:Arial;
-    /*font-size: calc(1vw + 10px);*/
-    height:140px;
-    
-    gap:10px;
-    
-    
+    height:78px;
+    min-width:300px;
+    gap:4px;
     box-sizing: border-box;
     flex-wrap: nowrap;
-    padding-right: 20px;
-    
     overflow: hidden;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
     margin-bottom: 0px;
-    
-    
 }
+
 nav form
 {
     display:flex;
     flex: 2 7 auto;
-    
     width:50%;
     height:100%;
     margin-top:auto;
     margin-bottom:auto;
 }
+
 .search
 {
-    
     width:90%;
     min-width: 45%;
     text-size-adjust: 100%;
-    
     flex: 2 7 auto;
-    /*font-size:calc(1vw + 10px);*/
-    border-radius: 50px;
+    border-radius: 35px;
     height:60%;
     margin:auto;
-    
 }
+
 .nav-button-search
 {
     width:9%;
     margin:auto 5px auto 5px;
-    height:60%;
+    height:50%;
     text-align: center;
-    width:100px;
-    
-    
+    width:70px;
 }
+
 .nav-box
 {
-    padding:15px;
+    padding:10px;
 }
+
 nav a .nav-button
 {
-    margin-top:25px;
+    margin-top:17px;
 }
+
 .nav-button
 {
-    margin-top:25px;
-    margin:auto 5px auto 5px;
-    height:70%;
+    margin:auto 5px;
+    height:50%;
     text-align: center;
-    width:100px;
-    border: 0px;
-    background-color: white;
-    /*font-size:calc(0.3vw + 10px);*/
+    width:75px;
 }
+
+.nav-button-inside
+{
+    background-color: white;
+    border:0px;
+}
+
+#Categories
+{
+    padding:10px;
+}
+
 .logo
 {
-    width:150px;
-    height:70px;
-    margin:30px;
-   
+    width:70px;
+    height:40px;
+    margin:21px;
 }
+
 #menu-bar
 {
     display:none;
 }
+
+.cart
+{
+    margin:auto 0px;
+}
+
 .icon-cart
 {
-    width:70px;
-    height:70px;
-    margin-top:30px;
-    padding: 0px;
+    width:40px;
+    height:40px;
 }
+
 nav div
 {
-    width:70px;
-    height:59%;
-    margin-top:26px;
-    margin-bottom: 26px;
+    width:30px;
+    height:50%;
+    margin:auto 0;
     border: 0.01px solid black;
     text-align:center;
-    
-    
+    align-content: center;
 }
+
 .icon-lang
 {
-    height:40%;
+    height:50%;
     width:70%;
-    margin-top:25px;
+    margin:8px auto;
     
 }
+
 .nav-button-login
 {
     margin:auto 5px auto 5px;
-    height:60%;
+    height:50%;
     text-align: center;
-    width:100px;
-    
-    
+    width:75px;
 }
+
 .nav-button-signup
 {
     margin:auto 5px auto 5px;
-    height:60%;
+    height:50%;
     text-align: center;
-    width:100px;
+    width:75px;
     background-color: black;
     color:white;
-    
 }
-.nav-button:hover
+.nav-button-inside:hover
 {
     color:#5624d0;
 }
 
-@media screen and (max-width:1200px)
+@media screen and (max-width:900px)
 {
     #Categories
     {
@@ -151,16 +150,13 @@ nav div
     }
     
 }
-@media screen and (max-width:1000px)
+
+@media screen and (max-width:800px)
 {
     #Udemy-Business
     {
         display:none;
     }
-}
-
-@media screen and (max-width:900px)
-{
     #Tech-on-Udemy
     {
         display: none;
@@ -170,6 +166,10 @@ nav div
         display: none;
         width:0%;
         margin:0;
+    }
+    .nav-button
+    {
+        width:0px;
     }
     .nav-button-login
     {
@@ -189,24 +189,21 @@ nav div
         width:0%;
         margin:0;
     }
-    .icon-cart
-    {
-        display: none;
-        width:0%;
-        margin:0;
-    }
     #menu-bar
     {
         display: inline;
         margin-left: 0px;
         position:absolute;
         left:0;
-        width:100px;
+        width:70px;
+    }
+    .logo
+    {
+        margin-right: 0px;
     }
     #logo
     {
-        margin-left: 0px;
-        width:100px;
+        margin-right: 0px;
     }
     nav form
     {
@@ -222,14 +219,7 @@ nav div
 
 }
 
-
-
-
-
 /* header */
-
-
-
 header
 {
     display:flex;
@@ -246,114 +236,159 @@ header
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
     padding-top:50px;
     padding-bottom: 100px;
-
 }
 
 .offer 
 {
-    
     margin:auto;
-    
-    
 }
+
 .offer-div
 {
-
     background-color: white;
     height:70%;
-    /*font-size: calc(0.8vw + 10px);*/
     width:70%;
     margin-right: auto;
     margin-left: auto;
     padding:20px;
     margin-bottom: 80px;
-   
-    
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
 }
+
 header .image
 {
-    
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
     width:50%;
     text-align: center;
-
 }
-
-
 /* final section */ 
-
-
 section .final-section
 {
     border:1px solid black;
     width: 100%;
 }
+
 section
 {
     width:85%;
     margin-right: auto;
     margin-left:auto;
 }
+
 section .font
 {
     font-family:Arial;
     padding-left:5%;
-    
-    /*font-size:calc(1vw + 10px);*/
-
-
 }
+
 section ul
 {
     display:flex;
     flex-direction: row;
     gap:5%;
-    
     font-family:Arial;
     padding-left: 2%;
-    /*font-size:calc( 1vw + 5px);*/
+    font-size:calc( 1vw + 5px);
     list-style-type: none;
     
 }
+
 section .courses-intro
 {
     width:80%;
     font-family: Arial;
-    
-    /*font-size: calc(1vw + 15px);*/
-    
     padding-left: 5%;
 }
-section .courses
+
+.course 
 {
-    
-    display:flex;
+    width: 240px;
+    margin: 2rem 0;
+}
+
+.course-title 
+{
+    margin: 0.5rem 0;
+}
+  
+.course-instructor 
+{
+    color: #6a6f73;
+    margin: 0;
+    font-size: 13px;
+}
+  
+.course-students 
+{
+    color: #6a6f73;
+    margin: 0;
+    font-size: 13px;
+    display: inline;
+    font-weight: lighter;
+}
+  
+.stars 
+{
+    margin: 0.5rem 0 0.5rem 0;
+    color: #e59819;
+    font-weight: bold;
+}
+  
+.courses 
+{
+    display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    padding-right: auto;
-    padding-left: auto;
-    gap:8%;
-    
+    justify-content:space-evenly;
+    padding: 0 5;
 }
-section .courses a
+  
+.course-discount {
+    color: #6a6f73;
+    margin: 0;
+    font-size: 13px;
+    display: inline;
+    font-weight: lighter;
+    text-decoration: line-through;
+    font-style: italic;
+}
+  
+.course-price 
 {
-    
-    text-align: center;
-    padding-left: 2%;
+    margin: 0.5rem 0;
+    display: inline-block;
 }
-section img
+
+.course-rate 
 {
-    width:100%;
+    color: #b4695b;
+    font-style: normal;
 }
+  
+.best-seller 
+{
+    background-color: #eceb98;
+    color: #3d3c0a;
+}
+  
+.best-seller 
+{
+    display: block;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px;
+}
+
 section a
 {
     text-decoration: none;
     color: black;
 }
+
 section a:hover
 {
     color:#5624d0;
