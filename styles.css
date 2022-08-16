@@ -11,7 +11,7 @@ nav
     justify-content:space-between;
     font-family:Arial;
     height:78px;
-    min-width:300px;
+    /*min-width:300px;*/
     gap:4px;
     box-sizing: border-box;
     flex-wrap: nowrap;
@@ -84,7 +84,10 @@ nav a .nav-button
     width:70px;
     height:40px;
     margin:21px;
+    
 }
+
+
 
 #menu-bar
 {
@@ -195,7 +198,8 @@ nav div
         margin-left: 0px;
         position:absolute;
         left:0;
-        width:70px;
+        width:40px;
+        
     }
     .logo
     {
