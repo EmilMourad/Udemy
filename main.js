@@ -87,24 +87,18 @@ let userinput = document.querySelector("[type = 'text']");
 search.onsubmit = function(e)
 {
     e.preventDefault();
-    let matched = 0; 
-    let string = userinput.value;
     for(let i = 0 ; i < myCourses.length ; i++)
     {
-
-        for(let j = 0 ; j  < string.length ; j++)
-        {
-            for(let k = 0 ; k < myCourses[i]["title"].length ; k++)
-            {
-                if(string[j].toLowerCase === myCourses[i]["title"][k].toLowerCase)
-                {
-                    matched++;
-                    break;
-                }
-            }
-        }
+        let cur = document.getElementById(`course${i}`);
+        cur.style.cssText = "display: block;";
+    }
+    let matched = 0; 
+    let string = userinput.value;
+    
+    for(let i = 0 ; i < myCourses.length ; i++)
+    {
         console.log(i , matched);
-        if(matched != string.length)
+        if(myCourses[i]["title"].toLowerCase().includes(string.toLowerCase()) == false)
         {
             let cur = document.getElementById(`course${i}`);
             cur.style.cssText = "display:none;";

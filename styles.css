@@ -10,7 +10,7 @@ nav
     flex-direction: row;
     justify-content:space-between;
     font-family:Arial;
-    height:78px;
+    height:72px;
     /*min-width:300px;*/
     gap:4px;
     box-sizing: border-box;
@@ -18,6 +18,7 @@ nav
     overflow: hidden;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
     margin-bottom: 0px;
+    padding: 0 24px;
 }
 
 nav form
@@ -37,6 +38,7 @@ nav form
     text-size-adjust: 100%;
     flex: 2 7 auto;
     border-radius: 35px;
+    border-width: 1px;
     height:60%;
     margin:auto;
 }
@@ -50,28 +52,20 @@ nav form
     width:70px;
 }
 
-.nav-box
-{
-    padding:10px;
-}
-
-nav a .nav-button
-{
-    margin-top:17px;
-}
-
 .nav-button
 {
-    margin:auto 5px;
+    margin:auto 0;
     height:50%;
     text-align: center;
-    width:75px;
+    width:120px;
 }
 
 .nav-button-inside
 {
     background-color: white;
     border:0px;
+    height: 40px;
+    
 }
 
 #Categories
@@ -81,9 +75,9 @@ nav a .nav-button
 
 .logo
 {
-    width:70px;
+    width:91px;
     height:40px;
-    margin:21px;
+    margin-top: 15px;
     
 }
 
@@ -129,6 +123,8 @@ nav div
     height:50%;
     text-align: center;
     width:75px;
+    background-color: white;
+    border-width: 1px;
 }
 
 .nav-button-signup
@@ -154,7 +150,7 @@ nav div
     
 }
 
-@media screen and (max-width:800px)
+@media screen and (max-width:870px)
 {
     #Udemy-Business
     {
@@ -167,7 +163,7 @@ nav div
     .search
     {
         display: none;
-        width:0%;
+        width:0px;
         margin:0;
     }
     .nav-button
@@ -177,19 +173,19 @@ nav div
     .nav-button-login
     {
         display:none;
-        width:0%;
+        width:0px;
         margin:0;
     }
     .nav-button-search
     {
         display:none;
-        width:0%;
+        width:0px;
         margin:0;
     }
     .nav-button-signup
     {
         display:none;
-        width:0%;
+        width:0px;
         margin:0;
     }
     #menu-bar
@@ -217,7 +213,7 @@ nav div
     }
     nav
     {
-        justify-content: end;
+        justify-content: flex-end;
         gap:0;
     }
 
@@ -284,27 +280,40 @@ section
 
 section .font
 {
-    font-family:Arial;
-    padding-left:5%;
+    font-family: SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+    font-size: xx-large;
+    
 }
+section .font1
+{
+    font-size: large;
+}
+
+
 
 section ul
 {
     display:flex;
     flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 0px;
     gap:5%;
     font-family:Arial;
-    padding-left: 2%;
-    font-size:calc( 1vw + 5px);
+    font-size:calc( 0.8vw + 5px);
     list-style-type: none;
     
+}
+section ul a 
+{
+    color: #6a6f73;
+    font-weight: bolder;
 }
 
 section .courses-intro
 {
     width:80%;
     font-family: Arial;
-    padding-left: 5%;
+    padding-left: 2%;
 }
 
 .course 
@@ -346,8 +355,9 @@ section .courses-intro
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content:space-evenly;
-    padding: 0 5;
+    justify-content:left;
+    padding-left: 1%;
+    gap:0.5%;
 }
   
 .course-discount {
@@ -396,4 +406,8 @@ section a
 section a:hover
 {
     color:#5624d0;
+}
+section ul a:hover
+{
+    color: black
 }
