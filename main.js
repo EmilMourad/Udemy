@@ -1,4 +1,3 @@
-
 const tab = {
     "Python" : "https://mocki.io/v1/8b5615b6-7748-4e40-8190-4f6d37b3f3d9" ,
     "Excel" : "https://ammardab3an-json-server.herokuapp.com/c_excel",
@@ -8,54 +7,60 @@ const tab = {
     "AWS certification" : "https://ammardab3an-json-server.herokuapp.com/c_aws",
     "Drawing" :  "https://ammardab3an-json-server.herokuapp.com/c_draw"
 };
-/* https://mocki.io/v1/5678b77b-e815-45c7-832b-ac67bada0453 */
 let myCourses = [];
-/*<div id="myCarousel" class="carousel slide" data-ride="carousel">
-        
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="" alt="Los Angeles">
-          </div>
-      
-          <div class="item">
-            <img src="" alt="Chicago">
-          </div>
-      
-          <div class="item">
-            <img src="" alt="New York">
-          </div>
-        </div>
-      
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>*/
-function coursesView(cat = "Python")
+function checkWord(word , title)
+{
+    if(title.toLowerCase().includes(word.toLowerCase()) == false) return false;
+    return true;
+}
+function coursesView(word , cat = "Python")
 {  
     fetch(tab[cat]).then(res => res.json()) .then(data =>
     {
         let finalSection = document.getElementById("final-section");
-        /*if(document.getElementById("courses") !== null) finalSection.removeChild(finalSection.lastChild);
-        if(document.getElementById("courses-intro") !== null) finalSection.removeChild(finalSection.lastChild);*/
-        while(finalSection.firstChild) finalSection.remove(finalSection.firstChild);
+        if(document.getElementById("courses") !== null) finalSection.removeChild(finalSection.lastChild);
+        if(document.getElementById("courses-intro") !== null) finalSection.removeChild(finalSection.lastChild);
         let introSection = document.createElement('div');
         introSection.classList.add("courses-intro");
         introSection.innerHTML = `<h3><b> ${data["header"]} </b></h3>  ${data["description"]}`;  
         finalSection.appendChild(introSection);
         introSection.setAttribute("id" , "courses-intro");
         myCourses = data["courses"];
+        let carousel = document.createElement("div");
+        carousel.classList.add("carousel" , "slide");
+        carousel.setAttribute("id" , "myCarousel");
+        carousel.setAttribute("data-ride" , "carousel");
+        let innerCarousel = document.createElement("div");
+        innerCarousel.classList.add("carousel-inner");
+        carousel.appendChild(innerCarousel);
         let myCoursesDiv = document.createElement("div");
         myCoursesDiv.classList.add("courses");
-        myCoursesDiv.setAttribute("id" , "courses");
+         myCoursesDiv.setAttribute("id" , "courses");
+        let cnt = 0;
         for(let i = 0 ; i < myCourses.length ; i++)
         {
+            if(checkWord(word , myCourses[i]["title"]) === false && word !== "") continue;
+            if(cnt % 5 == 0 || i == myCourses.length - 1)
+            {
+                if(cnt == 5)
+                {
+                    let activeItem = document.createElement("div");
+                    activeItem.classList.add("item","active");
+                    activeItem.appendChild(myCoursesDiv);
+                    innerCarousel.appendChild(activeItem);
+                }
+                if(cnt > 5)
+                {
+                    let item = document.createElement("div");
+                    item.classList.add("item");
+                    item.appendChild(myCoursesDiv);
+                    innerCarousel.appendChild(item);
+                }
+                myCoursesDiv = document.createElement("div");
+                myCoursesDiv.classList.add("courses");
+                myCoursesDiv.setAttribute("id" , "courses");
+
+            }
             let myCourseDiv = document.createElement("div");
             myCourseDiv.classList.add("course");
             myCourseDiv.setAttribute("id" , `course${i}`);
@@ -110,18 +115,36 @@ function coursesView(cat = "Python")
             myCourseDiv.appendChild(coursePrice);
             myCourseDiv.appendChild(courseDiscount);
             myCoursesDiv.appendChild(myCourseDiv);
+            cnt++;
         }
-        finalSection.appendChild(myCoursesDiv);
+        if(cnt > 0 && cnt < 5)
+        {
+            let activeItem = document.createElement("div");
+            activeItem.classList.add("item","active");
+            activeItem.appendChild(myCoursesDiv);
+            innerCarousel.appendChild(activeItem);
+        }
+        let left = document.createElement("a");
+        left.classList.add("left" ,"carousel-control");
+        left.setAttribute("href", "#myCarousel");
+        left.setAttribute("data-slide","prev");
+        left.innerHTML = `<span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>`;
+        let right = document.createElement("a");
+        right.classList.add("right" ,"carousel-control");
+        right.setAttribute("href", "#myCarousel");
+        right.setAttribute("data-slide","next");
+        right.innerHTML = `<span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>`;
+        carousel.appendChild(left);
+        carousel.appendChild(right);
+        finalSection.appendChild(carousel);
     });
 }
-coursesView();
-
-
-
-
+coursesView("");
+let currentTab = "Python";
 let search = document.getElementById("search");
 let userinput = document.querySelector("[type = 'text']");
-
 /* tabs section */
 let pythonTab = document.getElementById("Python");
 let excelTab = document.getElementById("Excel");
@@ -130,35 +153,21 @@ let javascriptTab = document.getElementById("Javascript");
 let dataTab = document.getElementById("Data");
 let awsTab = document.getElementById("AWS");
 let drawingTab = document.getElementById("Drawing");
-pythonTab.onclick = function () { coursesView("Python"); } 
-excelTab.onclick = function () { coursesView("Excel"); } 
-webTab.onclick = function () { coursesView("Web Development"); } 
-javascriptTab.onclick = function () { coursesView("Javascript"); } 
-dataTab.onclick = function () { coursesView("Data Science"); } 
-awsTab.onclick = function () { coursesView("AWS certification"); } 
-drawingTab.onclick = function () { coursesView("Drawing"); } 
-
-
+pythonTab.onclick = function () { currentTab = "Python" , coursesView("","Python"); } 
+excelTab.onclick = function () { currentTab = "Excel" , coursesView("","Excel"); } 
+webTab.onclick = function () { currentTab = "Web Development" , coursesView("","Web Development"); } 
+javascriptTab.onclick = function () { currentTab = "Javascript" , coursesView("","Javascript"); } 
+dataTab.onclick = function () { currentTab = "Data Science" , coursesView("","Data Science"); } 
+awsTab.onclick = function () { currentTab = "AWS certification" , coursesView("","AWS certification"); } 
+drawingTab.onclick = function () { currentTab = "Drawing" , coursesView("","Drawing"); } 
 /* search section */
 search.onsubmit = function(e)
 {
     e.preventDefault();
-    for(let i = 0 ; i < myCourses.length ; i++)
-    {
-        let cur = document.getElementById(`course${i}`);
-        cur.style.cssText = "display: block;";
-    }
     let string = userinput.value;
-    for(let i = 0 ; i < myCourses.length ; i++)
-    {
-        if(myCourses[i]["title"].toLowerCase().includes(string.toLowerCase()) == false)
-        {
-            let cur = document.getElementById(`course${i}`);
-            cur.style.cssText = "display:none;";
-        }
-    }
+    coursesView(string , currentTab);
 };
-
+/*categories section */
 function categoriesView()
 {
     fetch("https://mocki.io/v1/5678b77b-e815-45c7-832b-ac67bada0453").then(res => res.json()) .then(data =>
@@ -180,9 +189,7 @@ function categoriesView()
             content.innerHTML = `<img class = "category-image" src = "${categories[i]["image"]}" alt = "${categories[i]["title"]}" width = "250" height = "250">
             <div class = "category-title">${categories[i]["title"]}</div>`;
             content.style.cssText = "gap : 1%;";
-            console.log(categories[i]["image"]);
             row.appendChild(content);
-
         }
         categoriesSection.appendChild(row);
         document.body.appendChild(categoriesSection);

@@ -348,7 +348,7 @@ section .courses-intro
 {
     margin: 0.5rem 0 0.5rem 0;
     color: #e59819;
-    font-weight: bold;
+    font-weight: bolder;
 }
   
 .courses 
